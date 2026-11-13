@@ -215,7 +215,7 @@ function App() {
                   </table>
                 </div>
               )}
-              <p className="mt-3 text-[11px] text-slate-500 flex items-start gap-1.5"><Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />Los totales son antes de impuestos. Facturar (crear la factura en Books) todavía se hace desde Aptus.</p>
+              <p className="mt-3 text-[11px] text-slate-500 flex items-start gap-1.5"><Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />Los totales son antes de impuestos. Se factura desde el detalle de cada Prebill, ya autorizada.</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start" inert={saving}>
@@ -292,7 +292,7 @@ function App() {
                         <span className="text-sm font-bold text-slate-800">{Object.entries(totalSeleccion).map(([m, v]) => formatMoney(v, m)).join(' · ') || formatMoney(0, elegido.moneda)}</span>
                       </div>
                     )}
-                    <p className="mt-3 text-[11px] text-slate-500 flex items-start gap-1.5"><Check className="w-3.5 h-3.5 shrink-0 mt-0.5" />La Prebill nace en Borrador: después puedes agregar o quitar líneas, aplicar descuento y autorizarla. No se crea nada en Books.</p>
+                    <p className="mt-3 text-[11px] text-slate-500 flex items-start gap-1.5"><Check className="w-3.5 h-3.5 shrink-0 mt-0.5" />La Prebill nace en Borrador: después puedes agregar o quitar líneas, aplicar descuento, autorizarla y facturarla. Crearla no toca Books.</p>
                   </>
                 )}
                 {elegido && <button type="button" onClick={() => setElegido(null)} className="mt-2 text-xs text-slate-500 hover:text-slate-700 inline-flex items-center gap-1"><X className="w-3 h-3" />Cambiar cliente</button>}
