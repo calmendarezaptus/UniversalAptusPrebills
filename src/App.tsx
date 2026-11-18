@@ -16,6 +16,7 @@ import {
   idsPorTipo, KIND_PLURAL, KINDS, lineasDe, listosPorCliente, sumByMoneda,
   type Estado, type Linea, type Listo, type Prebill,
 } from '@/lib/prebills'
+import { MenuButton } from '@/components/MenuButton'
 
 type Modal = { isOpen: boolean; type: StatusModalType; title: string; message: string }
 type Row = Record<string, any>
@@ -139,6 +140,7 @@ function App() {
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-slate-900 tracking-tight">{creating ? 'Nueva Prebill' : 'Prebills'}</h1>
                 <ThemeMenu theme={theme} setTheme={setTheme} />
+                <MenuButton />
               </div>
               <p className="text-slate-500 text-sm mt-0.5">{creating ? 'Elige un cliente con registros liberados y lo que va en la Prebill' : 'Prebills por cliente y estado; abre una para revisarla y autorizarla'}</p>
             </div>
